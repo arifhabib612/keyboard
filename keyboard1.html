@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 30px;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        #keyboard{
+            width: 75.7mm;
+            height: 150.9mm;
+            background: #c10f0f;
+            border-radius: 20px;
+        }
+        #boxing{
+            width: 75.7mm;
+            height: auto;
+            background: #5D6164;
+            text-align: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        #boxing input{
+            width: 100%;
+            border: none;
+            padding: none;
+            height: 385px;
+            background: #000000;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+            padding-bottom: 330px;
+            text-align: start;
+            outline: none;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 25px;
+            color: white;
+        }
+        input::placeholder{
+            font-size: 20px;
+        }
+        #boxing button{
+            background: #FFFFFF;
+            border-radius: 5px;
+            padding-top: 7px;
+            padding-bottom: 6.4px;
+            padding-right: 10px;
+            margin-top: 7px;
+            border: none;
+        }
+        #boxing{
+            padding-bottom: 30px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .NewPlahEnglish pre{
+            width: 100px;
+            height: 20px;
+            box-sizing: border-box;
+        }
+        .NewPlahEnglish pre {
+            margin-top: 2px;
+        }
+        pre{
+            padding: 0;
+            margin: 0;
+        }
+        .NewPlahOther{
+            box-sizing: border-box;
+            width: 35px;
+            font-weight: bold;
+        }
+        .NewPlahBold{
+            box-sizing: border-box;
+            width: 35px;
+            font-weight: bold;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="keyboard">
+    <div id="boxing">
+        <input id="display" placeholder="Enter text">
+        <br>
+        <button class="NewPlah" onclick="key('q')">q</button>
+        <button class="NewPlah" onclick="key('w')">w</button>
+        <button class="NewPlah" onclick="key('e')">e</button>
+        <button class="NewPlah" onclick="key('r')">r</button>
+        <button class="NewPlah" onclick="key('t')">t</button>
+        <button class="NewPlah" onclick="key('y')">y</button>
+        <button class="NewPlah" onclick="key('u')">u</button>
+        <button class="NewPlah" onclick="key('i')">i</button>
+        <button class="NewPlah" onclick="key('o')">o</button>
+        <button class="NewPlah" onclick="key('p')">p</button>
+        <br>
+        <button class="NewPlah" onclick="key('a')">a</button>
+        <button class="NewPlah" onclick="key('s')">s</button>
+        <button class="NewPlah" onclick="key('d')">d</button>
+        <button class="NewPlah" onclick="key('f')">f</button>
+        <button class="NewPlah" onclick="key('g')">g</button>
+        <button class="NewPlah" onclick="key('h')">h</button>
+        <button class="NewPlah" onclick="key('j')">j</button>
+        <button class="NewPlah" onclick="key('k')">k</button>
+        <button class="NewPlah" onclick="key('l')">l</button>
+        <br>
+        <button class="NewPlahBold" onclick="AllClose()">⌂</button>
+        <button class="NewPlah" onclick="key('z')">z</button>
+        <button class="NewPlah" onclick="key('x')">x</button>
+        <button class="NewPlah" onclick="key('c')">c</button>
+        <button class="NewPlah" onclick="key('v')">v</button>
+        <button class="NewPlah" onclick="key('b')">b</button>
+        <button class="NewPlah" onclick="key('n')">n</button>
+        <button class="NewPlah" onclick="key('m')">m</button>
+        <button class="NewPlahOther" onclick="cancel()">↙</button>
+        <br>
+        <button class="NewPlah" onclick="key()">123</button>
+        <button class="NewPlah" onclick="key()">,</button>
+        <button class="NewPlah" onclick="key()">😑</button>
+        <button class="NewPlahEnglish" onclick="onspeas()"><pre><  English  ></English></pre></button>
+        <button class="NewPlah" onclick="key('.')">.</button>
+        <button class="NewPlah" onclick="key()">↩</button>
+    </div>
+</div>
+    <script>
+function key(input){
+    display.value += input;
+}
+function onspeas(input){
+    display.value += ' ';
+}
+function cancel(){
+    display.value = display.value.slice(0, -1);
+}
+function AllClose(){
+    display.value = "";
+}
+
+    </script>
+</body>
+</html>
