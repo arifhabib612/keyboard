@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #distry{
+            height: 100%;
+            width: 0;
+            position: fixed;
+            background-color: black;
+            transition: 0.5s;
+            /* z-index: 1; */
+            top: 0;
+            left: 0;
+            padding-left: 60px;
+            overflow-x: hidden;
+        }
+        .back{
+            margin-left: -40px;
+
+        }
+        .backend{
+            /* margin-top: -40px; */
+            margin-left: 40px;
+            font-size: 40px;
+            user-select: none;
+            color: rgb(241, 0, 0);
+            display: inline-block;
+            margin-left: 60px;
+            background: black;
+            box-sizing: border-box;
+            padding: 0px 10px 0px 10px;
+            
+        }
+        #crai{
+            transition: 0.5s;
+        }
+        .back{
+            padding: 0;
+            /* margin: 0; */
+    user-select: none;
+            color: rgb(239, 239, 239);
+            font-size: 30px;
+            border: none;
+            margin-left: -40px;
+            
+
+        }
+       a{
+           top: 0;
+           left: 0;
+           display: block;
+           font-size: 30px;
+           text-decoration: none;
+           color: white;
+           line-height: 40px;
+        }
+        .sidebar a{
+            margin-left: -40px;
+            grid-column: span 1;
+            overflow-x: hidden;
+        }
+        .sidebar a:hover{
+            display: block;
+            background-color: aqua;
+            transition: none;
+        }
+        .sidebar a:active{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="distry" class="sidebar">
+<span class="back" onclick="oppo()">&#9776;</span>
+<pre> <a href="#">◧ tessdhft</a>
+<a href="#">◆ tessdhft</a>
+<a href="#">▥ tessdhft</a>
+<a href="#">◧ tessdhft</a>
+<a href="#">◲ tessdhft</a></pre>
+    </div>
+    <div id="crai">
+        <span class="backend" onclick="vivo()">&times;</span>
+    </div>
+    <script>
+        function oppo(){
+document.getElementById("distry").style.width="250px";
+document.getElementById("crai").style.marginLeft="250px";
+        }
+        function vivo(){
+
+            document.getElementById("distry").style.width="0";
+document.getElementById("crai").style.marginLeft="0";
+        }
+    </script>
+</body>
+</html>
